@@ -1,0 +1,90 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Wood_2" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="json"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26.0" isBold="true" />
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18.0"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12.0" isBold="true" />
+	<style name="Detail" fontName="Arial" fontSize="12.0"/>
+	<queryString language="json"><![CDATA[members]]></queryString>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+		<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+	</field>
+	<field name="age" class="java.lang.Integer">
+		<fieldDescription><![CDATA[age]]></fieldDescription>
+		<property name="net.sf.jasperreports.json.field.expression" value="age"/>
+	</field>
+	<field name="secretIdentity" class="java.lang.String">
+		<fieldDescription><![CDATA[secretIdentity]]></fieldDescription>
+		<property name="net.sf.jasperreports.json.field.expression" value="secretIdentity"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="70" splitType="Stretch">
+		<element kind="image" x="-20" y="0" width="595" height="64">
+			<expression><![CDATA["wood.jpg"]]></expression>
+		</element>
+		<element kind="staticText" x="0" y="5" width="263" height="33" vTextAlign="Middle" style="Title">
+			<text><![CDATA[Wood Title]]></text>
+		</element>
+		<element kind="staticText" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" hTextAlign="Right" style="SubTitle">
+			<text><![CDATA[Wood SubTitle]]></text>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="line" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+		<element kind="staticText" x="0" y="19" width="185" height="15" style="Column header">
+			<text><![CDATA[name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93071518-9700-4f06-b989-2e7e25fa97ad"/>
+		</element>
+		<element kind="staticText" x="185" y="19" width="185" height="15" style="Column header">
+			<text><![CDATA[age]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21c7736c-a476-4e8a-affc-53afd04c7488"/>
+		</element>
+		<element kind="staticText" x="370" y="19" width="185" height="15" style="Column header">
+			<text><![CDATA[secretIdentity]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b69f3391-8108-4289-8fd2-f8a8b5b8e47a"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<element kind="line" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1">
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</element>
+			<element kind="textField" x="0" y="0" width="185" height="15" style="Detail">
+				<expression><![CDATA[$F{name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93071518-9700-4f06-b989-2e7e25fa97ad"/>
+			</element>
+			<element kind="textField" x="185" y="0" width="185" height="15" style="Detail">
+				<expression><![CDATA[$F{age}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21c7736c-a476-4e8a-affc-53afd04c7488"/>
+			</element>
+			<element kind="textField" x="370" y="0" width="185" height="15" style="Detail">
+				<expression><![CDATA[$F{secretIdentity}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b69f3391-8108-4289-8fd2-f8a8b5b8e47a"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch">
+		<element kind="line" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+	</columnFooter>
+	<pageFooter height="20" splitType="Stretch">
+		<element kind="textField" x="433" y="0" width="80" height="20" fontSize="10.0" bold="false" hTextAlign="Right" style="Column header">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" x="513" y="0" width="40" height="20" fontSize="10.0" evaluationTime="Report" bold="false" style="Column header">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" x="0" y="0" width="197" height="20" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" style="Column header">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary splitType="Stretch"/>
+</jasperReport>
